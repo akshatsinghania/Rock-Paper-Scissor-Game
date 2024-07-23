@@ -37,3 +37,21 @@ body {
   color: #7d2ae8;
   margin-top: 1.5rem;
 }
+.option_image img {
+  width: 50px;
+}
+.option_images {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+  justify-content: space-between;
+}
+.option_image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option_image p {
+  color: white;
+}
