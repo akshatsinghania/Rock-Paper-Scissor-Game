@@ -14,7 +14,16 @@ optionImages.forEach((image, index) => {
 
       let imageSrc = e.target.querySelector("img").src;
       userResult.src = imageSrc;
-      console.log(imageSrc);
+
+      let randomNumber = Math.floor(Math.random() * 3);
+      console.log(randomNumber);
+
+      let cpuImages = [
+        "images/rock.png",
+        "images/paper.png",
+        "images/scissors.png",
+      ];
+      cpuResult.src = cpuImages[randomNumber];
     });
   });
 });
