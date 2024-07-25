@@ -11,7 +11,11 @@ optionImages.forEach((image, index) => {
 
     optionImages.forEach((image2, index2) => {
       index !== index2 && image2.classList.remove("active");
+    });
+    gameContainer.classList.add("start");
 
+    let time = setTimeout(() => {
+      gameContainer.classList.remove("start");
       let imageSrc = e.target.querySelector("img").src;
       userResult.src = imageSrc;
 
@@ -32,15 +36,17 @@ optionImages.forEach((image, index) => {
         RP: "Cpu",
         RS: "User",
         PP: "Draw",
-        PR: "Cpu",
-        PS: "User",
+        PR: "User",
+        PS: "Cpu",
         SS: "Draw",
         SR: "Cpu",
         SP: "User",
       };
 
       let outComeValue = outcomes[userValue + cpuValue];
-      console.log(outComeValue);
-    });
+
+      result.textContent =
+        userValue === cpuValue ? "Match Draw" : `${outComeValue} won!`;
+    }, 2500);
   });
 });
