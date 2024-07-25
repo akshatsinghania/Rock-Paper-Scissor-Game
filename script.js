@@ -9,6 +9,9 @@ optionImages.forEach((image, index) => {
   image.addEventListener("click", (e) => {
     image.classList.add("active");
 
+    userResult.src = cpuResult.src = "images/rock.png";
+    result.textContent = "Wait...";
+
     optionImages.forEach((image2, index2) => {
       index !== index2 && image2.classList.remove("active");
     });
