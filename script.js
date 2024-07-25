@@ -24,6 +24,23 @@ optionImages.forEach((image, index) => {
         "images/scissors.png",
       ];
       cpuResult.src = cpuImages[randomNumber];
+      let cpuValue = ["R", "P", "S"][randomNumber];
+      let userValue = ["R", "P", "S"][index];
+
+      let outcomes = {
+        RR: "Draw",
+        RP: "Cpu",
+        RS: "User",
+        PP: "Draw",
+        PR: "Cpu",
+        PS: "User",
+        SS: "Draw",
+        SR: "Cpu",
+        SP: "User",
+      };
+
+      let outComeValue = outcomes[userValue + cpuValue];
+      console.log(outComeValue);
     });
   });
 });
